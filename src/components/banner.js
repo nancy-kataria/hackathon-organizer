@@ -1,7 +1,7 @@
 import { Button, Container, Typography, Box } from "@mui/material";
 import BannerStats from "./banner-stats";
 import { useNavigate } from "react-router-dom";
-import Images, { images } from '../constants'
+import { images } from '../constants'
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ const Banner = () => {
           </Container>
         </Container>
         <Box>
-          <img src={images.Rocket} />
+          <img src={images.Rocket} alt='banner rocket' />
         </Box>
       </Container>
      <BannerStats />

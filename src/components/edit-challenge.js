@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import ChallengeForm from "./challenge-form";
 
 const EditChallenge = () => {
-  const navigate = useNavigate();
   const { challengeId } = useParams();
 
   const [challengeDetails, setChallengeDetails] = useState();
