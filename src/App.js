@@ -1,16 +1,16 @@
-import './app.css';
-import {
-  RouterProvider,
-} from "react-router-dom";
+import "./app.css";
+import {  HashRouter } from "react-router-dom";
 import Header from "./components/header";
-import routes from "./router";
+import Router from "./router";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <RouterProvider router={routes} />
-    </div>
+    <HashRouter>
+      <div className="App">
+        <Header />
+        <Router />
+      </div>
+    </HashRouter>
   );
 }
 

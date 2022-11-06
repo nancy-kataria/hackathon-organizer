@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ChallengeDetails from "./components/challenge.details";
 import ChallengeList from "./components/challenges-list";
 import EditChallenge from "./components/edit-challenge";
 import NewChallenge from "./components/new-challenge";
 
-const routes = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <ChallengeList />,
@@ -21,6 +21,16 @@ const routes = createBrowserRouter([
     path: "/edit-challenge/:challengeId",
     element: <EditChallenge />,
   },
-]);
+];
 
-export default routes;
+const Router = () => {
+  return (
+    <Routes>
+      {routes.map((item) => (
+        <Route key={item.path} path={item.path} element={item.element}></Route>
+      ))}
+    </Routes>
+  );
+};
+
+export default Router;
